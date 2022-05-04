@@ -27,11 +27,11 @@ Workers connected to one another via Service bindings share the CPU resources of
 ### Setting a Service binding
 You can manage Workers Service bindings in [**Workers**](https://dash.cloudflare.com/?zone=workers) > your **Worker** > **Settings**> **Variables** > **Service bindings** > **Edit variables**. You can also change the environment of a Workers Service binding, so you can target a specific version of a Workers Service.
 
-![To configure a Service binding, head to your Worker's Settings tab](../media/../routing/media/service-bindings-config.png)
+![To configure a Service binding, head to your Worker's Settings tab](workers/platform/routing/media/service-bindings-config.png)
 
 Workers bound to your Worker will be listed in the [**Workers**](https://dash.cloudflare.com/?zone=workers) > your **Worker** > **Triggers** tab, under **Bound Services**. Your team can easily view cross-service dependencies in this manner.
 
-![Your team can view cross-service dependencies in the Triggers tab](../media/../routing/media/service-bindings-triggers.png)
+![Your team can view cross-service dependencies in the Triggers tab](workers/platform/routing/media/service-bindings-triggers.png)
 
 ## Composing an example Worker
 
@@ -58,7 +58,7 @@ This authentication Workers Service does not need to have a `*.workers.dev` or o
 
 In order to bind and call the [authentication Workers Service above](/workers/#authentication-service), the application Workers Service needs to set up a Workers Service binding. You can manage Workers Service bindings in [**Workers**](https://dash.cloudflare.com/?zone=workers) > your **Worker** > **Settings**> **Variables** > **Service bindings** > **Edit variables**.
 
-![Selecting Edit bindings to create new bindings and edit existing bindings that enable Worker-to-Worker communication](../media/service-bindings.png)
+![Selecting Edit bindings to create new bindings and edit existing bindings that enable Worker-to-Worker communication](workers/platform/media/service-bindings.png)
 
 Once added, the application Workers Service can access the Workers Service binding directly from the code, as in the example below.
 
