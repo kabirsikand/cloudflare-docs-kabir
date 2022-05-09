@@ -12,12 +12,14 @@ Service bindings are an API that facilitate Worker-to-Worker communication via e
 A Service binding allows you to send HTTP requests to another Worker without those requests going over the Internet. The request immediately invokes the downstream Worker, reducing latency as compared to a request to a third-party service. You can invoke other Workers directly from your code. This makes it possible to communicate with shared services managed by other teams with differing test and release processes. Those services do not need to be hooked up to publicly accessible endpoints. Service bindings facilitate private services to communicate with one another.
 
 Service bindings allow you to:
+
 * Segment multiple use cases into separate Workers Services that can be explicitly invoked from your code.
 * Achieve better composability on the Workers platform using service-oriented architecture.
 * Create private microservices, to be conditionally invoked from other edge-facing services.
 
 
 ### Interface
+
 Service bindings use the standard [Fetch](../../runtime-apis/fetch) API. You can continue to use your existing utilities and libraries - a Workers Service binding will trigger a [FetchEvent](../../runtime-apis/fetch-event). While the interface among Service bindings is HTTP, the networking is not. Unlike the typical microservice architecture, where services communicate over a network and can suffer from latency or interruption, Service bindings are a zero-cost abstraction. When one Worker invokes another, there is no network delay and the request is executed immediately.
 
 ![Service bindings are a zero-cost abstraction](../media/../routing/media/service-bindings-comparison.png)
